@@ -4,7 +4,9 @@
   "description": "HRR Frontend Capstone: twitch.tv clone on the recommended channels module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js",
+    "build": "webpack -d --watch"
   },
   "repository": {
     "type": "git",
