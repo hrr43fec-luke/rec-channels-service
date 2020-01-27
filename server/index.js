@@ -6,4 +6,8 @@ app.use(express.static('public'))
 
 app.get('/', (req, res) => res.sendStatus(200));
 
-app.listen(port, () => console.log(`rec channels listening on port ${port}`));
+log = (txt) => {
+  console.log(new Date().toString(), txt);
+}
+app.listen(port, () => log(`
+rec channels listening on port ${port}`));
