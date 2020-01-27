@@ -118,3 +118,6 @@ main_bundle.js
 psd
 thumb
 sketch
+
+### eslint ###
+.eslintrc.js
