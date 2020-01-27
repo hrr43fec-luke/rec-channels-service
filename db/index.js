@@ -17,3 +17,16 @@ var channelSchema = new mongoose.Schema({
   "viewer_count": Number,
   "thumbnail_url": String
 });
+
+var Channel = mongoose.model('Channel', channelSchema);
+
+var emongg = new Channel({
+  "id": 12345,
+  "user_id": 54321,
+  "user_name": 'Emongg',
+  "game_id": 55555,
+  "live": true,
+  "title": 'Road to GM',
+  "viewer_count": 9999,
+  "thumbnail_url": 'https://s3.amazonaws.com/uifaces/faces/twitter/iamjdeleon/128.jpg'
+})
