@@ -1,8 +1,10 @@
 const Channel = require('./index');
 
-const getChannels = (callback) => {
-  Channel.find(callback);
-  console.log('db getChannels===', callback);
+const helper = {
+  getChannels: (callback) => {
+    Channel.find(callback).sort({ viewer_count: -1 }).limit(10);
+    console.log('db getChannels cb===', callback);
+  }
 };
 
-module.exports = getChannels;
+module.exports = helper;

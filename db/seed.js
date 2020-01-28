@@ -8,7 +8,7 @@ const createChannel = () => {
   const channel = {};
   channel.user_id = faker.random.number();
   channel.user_name = faker.internet.userName();
-  channel.game_id = faker.random.number();
+  channel.game_name = faker.company.catchPhraseNoun();
   channel.live = faker.random.boolean();
   channel.title = faker.random.words();
   channel.viewer_count = faker.random.number();
