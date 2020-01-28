@@ -22,14 +22,14 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { channels } = this.state.channels;
+    const { channels } = this.state;
     console.log('channels:', channels)
     return (
       <div className="helloWorld">
         <h1>
-          `Hello World! It's me, the Recommended Channels Module`
-          <ChannelList channels={this.state.channels}/>
+          Recommended Channels
         </h1>
+          <ChannelList channels={this.state.channels}/>
       </div>
     );
   }

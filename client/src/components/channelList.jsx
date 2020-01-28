@@ -1,8 +1,29 @@
 import React from 'react';
-import channelEntry from './channelEntry';
+import PropTypes from 'prop-types';
+import ChannelEntry from './ChannelEntry.jsx';
 
-const channelList = () => {
+const ChannelList = ({ channels }) => (
+  <div className="channelList">
+    {channels.map((channel) => (
+      <ChannelEntry
+        key={channel._id}
+        channel={channel}
+      />
+    ))}
+  </div>
+);
 
-};
 
-export default channelList;
+ChannelList.propTypes = {
+  channels: PropTypes.shape({
+    user_id: PropTypes.number.isRequired,
+    user_name: PropTypes.string.isRequired,
+    game_name: PropTypes.string.isRequired,
+    live: PropTypes.bool.isRequired,
+    title: PropTypes.string.isRequired,
+    viewer_count: PropTypes.number.isRequired,
+    thumbnail_url: PropTypes.string.isRequired,
+  }).isRequired,
+}
+
+export default ChannelList;

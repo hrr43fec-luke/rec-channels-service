@@ -4,9 +4,10 @@
   "description": "HRR Frontend Capstone: twitch.tv clone on the recommended channels module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server/index.js",
-    "build": "webpack -d --watch"
+    "build": "webpack -d --watch",
+    "seed": "node ./db/seed.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "mongodb": "^3.5.2",
     "mongoose": "^5.8.9",
     "nodemon": "^2.0.2",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
