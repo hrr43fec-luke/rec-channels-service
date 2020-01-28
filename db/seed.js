@@ -11,7 +11,10 @@ const createChannel = () => {
   channel.game_name = faker.company.catchPhraseNoun();
   channel.live = faker.random.boolean();
   channel.title = faker.random.words();
-  channel.viewer_count = faker.random.number();
+  channel.viewer_count = faker.random.number({
+    min: 1000,
+    max: 15000,
+  });
   channel.thumbnail_url = faker.internet.avatar();
   return channel;
 };
