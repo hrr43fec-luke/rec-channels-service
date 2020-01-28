@@ -1,12 +1,11 @@
 /* eslint-disable linebreak-style */
 const express = require('express');
+const router = require('./router');
 
 const app = express();
-const port = 2004;
-
+const port = 3000;
+app.use(router);
 app.use(express.static('public'));
-
-app.get('/', (req, res) => res.sendStatus(200));
 
 const log = (txt) => {
   // eslint-disable-next-line no-console
