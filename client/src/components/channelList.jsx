@@ -4,6 +4,9 @@ import ChannelEntry from './ChannelEntry.jsx';
 
 const ChannelList = ({ channels }) => (
   <div className="channelList">
+    <h2>
+      RECOMMENDED CHANNELS
+    </h2>
     {channels.map((channel) => (
       <ChannelEntry
         key={channel._id}

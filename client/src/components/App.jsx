@@ -25,10 +25,7 @@ export default class App extends React.Component {
     const { channels } = this.state;
     console.log('channels:', channels)
     return (
-      <div className="helloWorld">
-        <h1>
-          Recommended Channels
-        </h1>
+      <div className="channelList">
           <ChannelList channels={this.state.channels}/>
       </div>
     );
