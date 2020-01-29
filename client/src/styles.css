@@ -1,0 +1,49 @@
+.channelList {
+  max-width: 500px;
+  background-color: #1F1E23;
+  color: #B4B3B8;
+  font-family: Roobert,Helvetica Neue,Helvetica,Arial,sans-serif!important
+}
+
+.channelEntry {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.avatarPic {
+  border-radius: 50%;
+  padding: 0.5em;
+}
+
+.user-game {
+}
+
+.username {
+  padding-top: 0.5em;
+  padding-bottom: 0.25em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.gamename {
+  padding-top: 0.25em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1rem;
+}
+
+.live-count {
+  justify-content: flex-end;
+}
+
+.live {
+  color: red;
+}
+
+.viewer-count {
+  font-size: 1rem;
+}
