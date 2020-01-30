@@ -1,8 +1,6 @@
+/* eslint-disable no-undef */
 const dbHelperFunction = require('../db/dbHelpers');
 
-describe('dbHelperFunction', function() {
-
-  it('should exist', function() {
-    expect(dbHelperFunction).toBeDefined();
-  });
-})
+it('should exist', () => {
+  expect(dbHelperFunction).toBeDefined();
+});
