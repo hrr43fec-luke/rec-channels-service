@@ -8,7 +8,7 @@ describe('insert', () => {
   let db;
 
   beforeAll(async () => {
-    connection = await mongoose.connect('mongodb://127.0.0.1:27017', {
+    connection = await mongoose.connect('mongodb://localhost/test', {
       useUnifiedTopology: true, useNewUrlParser: true,
     });
     db = await mongoose.connection;
