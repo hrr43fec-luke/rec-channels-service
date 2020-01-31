@@ -26,7 +26,7 @@ export default class App extends React.Component {
     console.log('channels:', channels)
     return (
       <div className="channelList">
-          <ChannelList channels={this.state.channels}/>
+        <ChannelList channels={this.state.channels}/>
       </div>
     );
   }

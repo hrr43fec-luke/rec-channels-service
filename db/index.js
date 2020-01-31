@@ -1,15 +1,32 @@
 /* eslint-disable no-console */
 const mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost/channels', { useNewUrlParser: true });
 const channelSchema = require('./schema.js');
+require('dotenv').config();
+
+mongoose
+  .connect(process.env.DATABASE_URL, {
+    useUnifiedTopology: true, useNewUrlParser: true,
+  });
+
 
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'db connection error:'));
 db.once('open', () => {
-  console.log.bind(console, 'db connected!');
+  // console.log('connected to mongodb');
 });
+// }
 
 const Channel = mongoose.model('Channel', channelSchema);
 
 module.exports = Channel;
+
+// const connectionString = process.env.MONGODB_URI;
+
+// run().then(() => console.log('done')).catch(error => console.error(error.stack));
+// db.on('error', console.error.bind(console, 'db connection error:'));
+
+// async function run() {
+//   dbName: process.env.DB_NAME,
+//   user: process.env.DB_USER,
+//   // password: process.env.DB_PASSWORD,
+// });
+// pL@VYWqJr7z@BRE
