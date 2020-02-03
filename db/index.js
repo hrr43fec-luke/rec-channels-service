@@ -8,13 +8,6 @@ mongoose
     useUnifiedTopology: true, useNewUrlParser: true,
   });
 
-
-const db = mongoose.connection;
-db.once('open', () => {
-  // console.log('connected to mongodb');
-});
-// }
-
 const Channel = mongoose.model('Channel', channelSchema);
 
 module.exports = Channel;
