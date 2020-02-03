@@ -1,25 +1,22 @@
 import React from 'react';
+import AvatarPic from './AvatarPic.jsx';
+import Username from './Username.jsx';
+import GameName from './GameName.jsx';
+import LiveIcon from './LiveIcon.jsx';
+import ViewerCount from './ViewerCount.jsx';
+import ToolTip from './ToolTip.jsx';
 
 const ChannelEntry = ({ channel }) => (
   <div className="channelEntry">
-    <div>
-      <img className="avatarPic" src={channel.thumbnail_url} alt="" />
-    </div>
+      <AvatarPic avatar={channel.thumbnail_url} />
     <div className="user-game">
-      <div className="username">
-        {channel.user_name}
-      </div>
-      <div className="gamename">
-        {channel.game_name}
-      </div>
+      <Username username={channel.user_name} />
+      <GameName gamename={channel.game_name} />
     </div>
     <div className="live-count">
-      <div className="live">
-        {channel.live ? '●' : 'offline'}
-      </div>
-      <div className="viewer-count">
-        {channel.viewer_count}
-      </div>
+      <LiveIcon live={channel.live} />
+      <ViewerCount views={channel.viewer_count} />
+      <ToolTip tooltip={channel.title} />
     </div>
   </div>
 );

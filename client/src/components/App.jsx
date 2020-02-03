@@ -7,26 +7,28 @@ export default class App extends React.Component {
     super(props);
     this.state = {};
     this.state.channels = [];
-    console.log('state:', this.state.channels)
+    console.log('state:', this.state.channels);
   }
 
   componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData() {
     fetch('/channels')
-      .then((response) => {
-        return response.json()
-          .then((body) => {
-            console.log('body', body)
-            this.setState({ channels: body });
-          });
-      });
+      .then((response) => response.json()
+        .then((body) => {
+          console.log('body', body);
+          this.setState({ channels: body });
+        }));
   }
 
   render() {
     const { channels } = this.state;
-    console.log('channels:', channels)
+    console.log('channels:', channels);
     return (
       <div className="channelList">
-        <ChannelList channels={this.state.channels}/>
+        <ChannelList channels={this.state.channels} />
       </div>
     );
   }
