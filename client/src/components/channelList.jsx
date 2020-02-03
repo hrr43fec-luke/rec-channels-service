@@ -4,9 +4,9 @@ import ChannelEntry from './ChannelEntry.jsx';
 
 const ChannelList = ({ channels }) => (
   <div className="channelList">
-    <h2>
+    <h3>
       RECOMMENDED CHANNELS
-    </h2>
+    </h3>
     {channels.map((channel) => (
       <ChannelEntry
         key={channel._id}
@@ -27,6 +27,6 @@ ChannelList.propTypes = {
     viewer_count: PropTypes.number.isRequired,
     thumbnail_url: PropTypes.string.isRequired,
   }).isRequired,
-}
+};
 
 export default ChannelList;

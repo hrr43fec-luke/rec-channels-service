@@ -1,7 +1,7 @@
 .channelList {
-  max-width: 500px;
+  max-width: 355px;
   background-color: #1F1E23;
-  color: white;
+  color: 	#F0E4D8;
   font-family: Roobert,Helvetica Neue,Helvetica,Arial,sans-serif!important
 }
 
@@ -9,10 +9,8 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
-  width: 100%;
+  border: 1px solid yellow
 }
 
 .avatarPic {
@@ -27,13 +25,33 @@
 .user-game {
   margin-left: 1rem;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  padding-top: 8px;
 }
 
 .username {
-  font-size: 1.4rem;
-  font-weight: 600;
+  position: relative;
+  font-size: 1.1rem;
   line-height: 1.2;
+}
 
+.channelEntry:hover .tooltiptext{
+  visibility: visible;
+  transition: 0.15s;
+}
+
+.channelEntry .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent #1F1E23 transparent transparent;
 }
 
 .gamename {
@@ -50,17 +68,51 @@
   justify-content: flex-end;
   align-items: center;
   box-sizing: border-box;
-  margin: 0;
 }
 
 .live {
+  width: 10px;
+  height: 10px;
+  background: rgb(255, 0, 64);
+  border-radius: 50%;
   color: red;
-  height: .8rem;
-  width: .8rem;
+  font-size: 20px;
+  text-align: center;
+  line-height: 10px;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+      box-shadow: 0 0 0 0 rgba(255, 0, 64, 0.7), 0 0 0 0 rgba(255, 0, 64, 0.7);
+  }
+
+  40% {
+      box-shadow: 0 0 0 5px rgba(255, 0, 64, 0), 0 0 0 0 rgba(255, 0, 64, 0.7);
+  }
+
+  80% {
+      box-shadow: 0 0 0 7px rgba(255, 0, 64, 0), 0 0 0 7px rgba(255, 0, 64, 0);
+  }
+
+  100% {
+      box-shadow: 0 0 0 0 rgba(255, 0, 64, 0), 0 0 0 7px rgba(255, 0, 64, 0);
+  }
 }
 
 .viewer-count {
   margin-left: .5rem;
   margin-right: .5rem;
   font-size: 1rem;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 210px;
+  background-color: #1F1E23;
+  color: #B4B3B8;
+  border-radius: 10px;
+  padding: 5px;
+  position: absolute;
+  left: 370px;
 }
