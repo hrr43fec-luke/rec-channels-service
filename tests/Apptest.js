@@ -1,26 +1,16 @@
 // /* eslint-disable no-undef */
 // import React from 'react';
 // import renderer from 'react-test-renderer';
-// import { shallow } from 'enzyme';
+// import Enzyme, { shallow } from 'enzyme';
+// import Adapter from 'enzyme-adapter-react-16';
 // import App from '../client/src/components/App.jsx';
 
-// // describe('App', () => {
-// //   let app;
+// Enzyme.configure({ adapter: new Adapter() });
 
-// //   before(() => {
-// //     app = shallow(<App />);
-// //   });
-// // });
-
-// it('App renders nested components', () => {
-//   expect(app.find('ChannelList').length).toEqual(1);
+// describe('App', () => {
+//   it('should find a component', () => {
+//     const wrapper = shallow(<App />);
+//     const component = wrapper.find('div div');
+//     expect(component.)
+//   });
 // });
-
-
-// // describe('App (Snapshot)', () => {
-// //   it('App renders RECOMMENDED CHANNELS', () => {
-// //     const component = renderer.create(<App />);
-// //     const json = component.toJSON();
-// //     expect(json).toMatchSnapshot();
-// //   });
-// // });
