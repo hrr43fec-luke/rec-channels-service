@@ -39,12 +39,18 @@
   line-height: 1.2;
 }
 
-.channelEntry:hover .tooltiptext{
+.gamename {
+  font-size: 0.7rem;
+  line-height: 1.2;
+  color: #B4B3B8;
+}
+
+.channelEntry:hover .tooltipbox{
   visibility: visible;
   transition: 0.15s;
 }
 
-.channelEntry .tooltiptext::after {
+.channelEntry .tooltipbox::after {
   content: " ";
   position: absolute;
   top: 50%;
@@ -53,12 +59,6 @@
   border-width: 6px;
   border-style: solid;
   border-color: transparent #1F1E23 transparent transparent;
-}
-
-.gamename {
-  font-size: 0.7rem;
-  line-height: 1.2;
-  color: #B4B3B8;
 }
 
 .live-count {
@@ -107,13 +107,20 @@
   font-size: 0.7rem;
 }
 
-.tooltiptext {
+.tooltipbox {
   visibility: hidden;
-  width: 210px;
   background-color: #1F1E23;
   color: #B4B3B8;
+  font-size: 0.8rem;
+  width: 210px;
+  left: 370px;
+  height: 2.3rem;
   border-radius: 10px;
   padding: 5px;
   position: absolute;
-  left: 370px;
+  white-space: normal !important;
+}
+
+.tooltiptext {
+  display: flex;
 }

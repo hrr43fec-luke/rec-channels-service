@@ -58,6 +58,24 @@ const gameName = [
   `PUBG MOBILE`,
 ];
 
+
+const verbs = [`being the best`, `buffing`, `carrying`, `climbing`, `dominating`, `exploiting bugs on`, `farming`, `flaming`, `fragging`, `grinding`, `hacking`, `having fun with`, `headshotting`, `killing`, `making sammiches for`, `maxing out my APMs on`, `nerfing`, `playing without a keyboard against`, `pwning`, `raiding`, `role-playing`, `spawn camping`, `taking out`, `wiping out`, `wrecking`];
+const adjs = [`0 FPS`, `aggressive`, `super basic`, `blindfolded`, `bootleg`, `easy`, `garbage`, `high-skilled`, `HUGE`, `INSANE`, `low IQ`, `low-skilled`,`MASSIVE`, `smurf`, `toxic`, `trash`];
+const nouns = [`final B0$$`, `bots`, `champions`, `creeps`, `enemy team`, `hack0rz`, `heroes`, `mobs`, `n3wbz`, `NPCs`, `n00bz`, `players`, `scrubs`, `teammates`, `throwers`];
+const phrases = [`alt+f4 ASAP!`, `/cry`, `git rekt!!`, `gg`, `I'M OUT!!!`, `ㄱㄱ`, `ㅋㅋㅋ ㄴㅇㄴ`, `ㄳ`, `ㅈㅅ`, `ㅅㄱ`, `살려주세요`, `ㅠㅠ`, `L2P`, `LUL`, `nice try`, `OMEGALOL`, `p0gg3rz`, `/quit`, ` ROFLcopter`, `SMH`];
+
+const createStatus = () => {
+
+  const getRandomPart = (statusPart) => {
+    let statusLength = statusPart.length
+    let randomIdx = Math.floor(Math.random() * Math.floor(statusLength))
+    return statusPart[randomIdx];
+  };
+
+  const createdStatus = `${getRandomPart(verbs)} ${getRandomPart(adjs)} ${getRandomPart(nouns)} ${getRandomPart(phrases)}`
+  return createdStatus;
+};
+
 // creates 20 channels for each of the 100 videoIds
 const createVideosChannels = () => {
   const videoChannels =[];
@@ -71,7 +89,7 @@ const createVideosChannels = () => {
           max: 49,
         })],
         live: true,
-        title: faker.random.words(),
+        title: createStatus(),
         viewerCount: faker.random.number({
           min: 1000,
           max: 9999,
