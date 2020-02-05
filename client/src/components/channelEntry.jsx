@@ -8,14 +8,14 @@ import ToolTip from './ToolTip.jsx';
 
 const ChannelEntry = ({ channel }) => (
   <div className="channelEntry">
-      <AvatarPic avatar={channel.thumbnail_url} />
+      <AvatarPic avatar={channel.thumbnailUrl} />
     <div className="user-game">
-      <Username username={channel.user_name} />
-      <GameName gamename={channel.game_name} />
+      <Username username={channel.userName} />
+      <GameName gamename={channel.gameName} />
     </div>
     <div className="live-count">
       <LiveIcon live={channel.live} />
-      <ViewerCount views={channel.viewer_count} />
+      <ViewerCount views={channel.viewerCount} />
       <ToolTip tooltip={channel.title} />
     </div>
   </div>
