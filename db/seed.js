@@ -76,6 +76,16 @@ const createStatus = () => {
   return createdStatus;
 };
 
+    /*  TO TEST STATUSES  */
+// const oneHundredStatuses = () => {
+//   const statuses = [];
+//   for (var i = 0; i < 100; i++) {
+//     statuses.push(createStatus());
+//   }
+//   console.log(statuses);
+//   return statuses;
+// }
+
 // creates 20 channels for each of the 100 videoIds
 const createVideosChannels = () => {
   const videoChannels =[];
