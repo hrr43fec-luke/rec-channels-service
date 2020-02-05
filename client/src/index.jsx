@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './styles.css';
-import App from './components/App.jsx';
+import ChannelService from './components/ChannelService.jsx';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+let id = window.location.search.slice(1);
+let videoId = id ? id : 1;
+console.log('id, video id', id, videoId)
+
+
+ReactDOM.render(<ChannelService videoId={videoId}/>, document.getElementById('channel-service'));
