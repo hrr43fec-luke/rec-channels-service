@@ -1,14 +1,13 @@
 const mongoose = require('mongoose');
 
 const channelSchema = new mongoose.Schema({
-  id: Number,
-  user_id: Number,
-  user_name: String,
-  game_name: String,
+  videoId: Number,
+  userName: String,
+  gameName: String,
   live: Boolean,
   title: String,
-  viewer_count: Number,
-  thumbnail_url: String,
+  viewerCount: Number,
+  thumbnailUrl: String,
 });
 
 module.exports = channelSchema;
