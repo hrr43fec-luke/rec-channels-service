@@ -4,7 +4,7 @@ module.exports = {
   entry: './client/src/index.jsx',
   output: {
     path: path.join(__dirname, '/public'),
-    filename: 'main_bundle.js',
+    filename: 'channel_bundle.js',
   },
   module: {
     rules: [

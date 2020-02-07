@@ -112,6 +112,7 @@ temp/
 node_modules
 
 main_bundle.js
+channel_bundle.js
 
 *.sublime*
 
