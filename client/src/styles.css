@@ -5,6 +5,10 @@
   font-family: Roobert,Helvetica Neue,Helvetica,Arial,sans-serif!important
 }
 
+h4 {
+  padding: 15px;
+}
+
 .channelEntry {
   display: flex;
   /* justify-content: space-between;
@@ -38,6 +42,8 @@
   position: relative;
   font-size: 1rem;
   line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .gamename {
@@ -120,6 +126,7 @@
   padding: 5px;
   position: absolute;
   white-space: normal !important;
+  z-index: 1;
 }
 
 .tooltiptext {
