@@ -1,15 +1,19 @@
 .channelList {
-  max-width: 355px;
-  background-color: #1F1E23;
+  max-width: 20rem;
+  background-color: #0e0e10;
   color: 	#F0E4D8;
   font-family: Roobert,Helvetica Neue,Helvetica,Arial,sans-serif!important
 }
 
+h4 {
+  padding: 15px;
+}
+
 .channelEntry {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between;
   flex-direction: row;
-  white-space: nowrap;
+  white-space: nowrap; */
   /* border: 1px solid yellow */
 }
 
@@ -25,18 +29,21 @@
 
 .user-game {
   margin-left: 1rem;
-  width: 100%;
+  width: 8rem;
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
   display: inline-block;
   padding-top: 8px;
+  text-overflow: ellipsis;
 }
 
 .username {
   position: relative;
   font-size: 1rem;
   line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .gamename {
@@ -113,12 +120,13 @@
   color: #B4B3B8;
   font-size: 0.8rem;
   width: 210px;
-  left: 370px;
+  left: 17rem;
   height: 2.3rem;
   border-radius: 10px;
   padding: 5px;
   position: absolute;
   white-space: normal !important;
+  z-index: 1;
 }
 
 .tooltiptext {
