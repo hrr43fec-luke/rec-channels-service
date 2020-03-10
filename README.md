@@ -1,5 +1,5 @@
-# Recommended Channels Service
-The Recommended Channels is a Twitch.tv module clone required by Hack Reactor's Front End Capstone
+# Recommended Channels
+This is the Recommended Channels API for Game Tagger. Watch your favorite streamers or stream yourself!
 
 ## Related Projects
 1. **Philip Nguyen** [@nguyephi](https://github.com/nguyephi)
