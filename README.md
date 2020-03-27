@@ -1,5 +1,6 @@
 # Recommended Channels
 This is the Recommended Channels API for Game Tagger. Watch your favorite streamers or stream yourself!
+<img src="https://i.imgur.com/FARLtV1.gif" alt="Tag along with your favorite streamers or stream yourself!"/>
 
 ## Related Projects
 1. **Philip Nguyen** [@nguyephi](https://github.com/nguyephi)
