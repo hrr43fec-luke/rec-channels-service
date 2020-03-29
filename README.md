@@ -1,5 +1,7 @@
 # Game Tagger: Recommended Channels API
-#### Watch your favorite streamers or stream yourself! Game Tagger allows you to tag along anywhere at anytime. Switch things up and discover something new by checking out the recommended channels.
+#### Watch your favorite streamers or stream yourself! 
+Game Tagger allows you to tag along anywhere at anytime. 
+Switch things up and discover something new by checking out the recommended channels.
 <img src="https://i.imgur.com/FARLtV1.gif" alt="Tag along with your favorite streamers or stream yourself!"/>
 
 ## Related Projects
